@@ -13,7 +13,11 @@ public class RecommandationMetierImpl implements IRecommendationMetier {
     @Autowired
     @Qualifier("dao")
     private IRecommendationDao dao;
-
+    public RecommandationMetierImpl(@Qualifier("dao") IRecommendationDao dao) {
+        this.dao = dao;
+        
+    }
+   
     @Override
     public Livre recommander() {
         List<Livre> livres = dao.getLivre();
@@ -25,9 +29,7 @@ public class RecommandationMetierImpl implements IRecommendationMetier {
         return livres.get(randomIndex);
         
     }
-    public void setDao(IRecommendationDao dao) {
-        this.dao = dao;
-    }
+    
 
     
 

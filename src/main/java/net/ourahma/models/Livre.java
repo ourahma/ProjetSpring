@@ -22,10 +22,9 @@ public class Livre {
     }
     @Override
     public String toString() {
-        return "Livre{" +
+        return "Livre est => " +
                 "titre='" + titre + '\'' +
-                ", auteur='" + auteur + '\'' +
-                '}';
+                ", auteur='" + auteur + '\'';
     }
 
 }

@@ -4,9 +4,10 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="dao1" class="net.ourahma.LivreDaoImpl"/>
+    <bean id="dao" class="net.ourahma.dao.LivreDaoImpl"/>
     
     <bean id="metier" class="net.ourahma.metier.RecommandationMetierImpl">
-        <property name="dao" ref="dao1"/>
+        <!-- <property name="dao" ref="dao"/> -->
+        <constructor-arg ref="dao"/>
     </bean>
 </beans>

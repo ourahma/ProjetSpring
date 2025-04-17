@@ -10,7 +10,7 @@ import net.ourahma.models.Livre;
 public class LivreDaoImpl implements IRecommendationDao {
     @Override
     public List<Livre> getLivre() {
-       
+        System.out.println("********************** Le livre recommandé depuis la base de données *******************************");
         return Arrays.asList(
             new Livre("Le Petit Prince", "Antoine de Saint-Exupéry"),
             new Livre("1984", "George Orwell"),
